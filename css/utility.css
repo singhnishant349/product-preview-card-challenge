@@ -1,0 +1,71 @@
+:root {
+    /* colors */
+    --color-primary: hsl(158, 36%, 37%);
+    --color-primary-dark: hsl(158, 36%, 20%);
+    --color-secondary: hsl(30, 38%, 92%);
+
+    --color-neutral-900: hsl(212, 21%, 14%);
+    --color-neutral-400: hsl(228, 12%, 48%);
+    --color-neutral-100: hsl(0, 0%, 100%);
+
+    /* typography */
+    --font-accent: 'Fraunces', serif;
+    --font-base: 'Montserrat', sans-serif;
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+/* ********************** CSS Resets ********************** */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+  
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* ********************** For Visually Hidden ********************** */
+.visually-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+  

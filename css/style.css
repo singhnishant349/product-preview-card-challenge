@@ -1,0 +1,113 @@
+@import url(./utility.css);
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ********************** General Styling ********************** */
+
+body {
+    font-family: var(--font-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    color: var(--color-neutral-400);
+    background-color: var(--color-secondary);   
+    min-height: 90vh;
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+/* ********************** Utilities ********************** */
+.font-size_family {
+    font-size: 2rem;
+    font-family: var(--font-accent);
+}
+
+/* ********************** Product Styling ********************** */
+
+.product {
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+
+    display: grid;
+    background-color: var(--color-neutral-100);
+    border-radius: 0.5rem;     
+    overflow: hidden; 
+    max-width: 624px;
+}
+
+@media (min-width: 624px) {
+    .product {
+        --content-padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product__content {
+    display: grid;
+    gap: var(--content-spacing);
+    padding: var(--content-padding);
+}
+
+.product__category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8125rem;
+}
+
+.product__title {
+    color: var(--color-neutral-900);
+    line-height: 1;
+}
+
+.product__price {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product__new-price {
+    color: var(--color-primary);
+}
+
+.cart-btn {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-neutral-100);
+    background-color: var(--color-primary);
+    font-weight: var(--fw-bold);
+    font-size: 0.925rem;
+}
+
+.cart-btn:is(:hover, :focus) {
+    background-color: var(--color-primary-dark);
+}
+.cart-btn[data-icon="shopping-cart"]::before {
+    content: "";
+    width: 15px;
+    height: 16px;
+    background-image: url(./images/icon-cart.svg);
+    background-repeat: no-repeat;
+    background-position: center left 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.attribution {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+}
+
+.coder__name,
+.site__name {
+    font-weight: var(--fw-bold);
+    color: var(--color-neutral-700);
+    text-decoration: underline;
+}
